@@ -27,9 +27,9 @@ if (empty($wp)) {
  */
 function trackback_response($error = 0, $error_message = '') {
 	header('Content-Type: text/xml; charset=' . get_option('blog_charset') );
-	if ($error) {
+	if ($error)  {
 		echo '<?xml version="1.0" encoding="utf-8"?'.">\n";
-		echo "<response>\n";
+		
 		echo "<error>1</error>\n";
 		echo "<message>$error_message</message>\n";
 		echo "</response>";
